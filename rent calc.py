@@ -5,28 +5,49 @@ def calc_rent(total, power):
     utilities = total - rent
     ballance_amount = 150
     two_thirds_power = 2/3 * power
+    total = rent + utilities + power
 
-    Quinn = {
-        "Rent": (rent / 2) - 150,
-        "Utilities": utilities / 3,
-        "Power": power / 3
+
+    # Nathan
+    r_na = (rent / 2) - ballance_amount
+    u_na = utilities / 3
+    p_na = power / 3
+
+    Nathan = {
+        "Rent": r_na,
+        "Utilities": u_na,
+        "Power": p_na,
+        "Total": r_na + u_na + p_na
         }
 
+    
+    # Noah
+    r_no = (rent / 4) + (ballance_amount / 2)
+    u_no = utilities / 3
+    p_no = power / 3
+    
     Noah = {
-        "Rent": (rent / 4) + 75,
-        "Utilities": utilities / 3,
-        "Power": power / 3
+        "Rent": r_no,
+        "Utilities": u_no,
+        "Power": p_no,
+        "Total": r_no + u_no + p_no
         }
+
+    # Ella
+    r_el = (rent / 4) - two_thirds_power + (ballance_amount / 2)  
+    u_el = utilities / 3
+    p_el = 0
 
     Ella = {
-        "Rent": (rent / 4) + (75 - two_thirds_power)  ,
-        "Utilities": utilities / 3,
-        "Power": 0
+        "Rent": r_el,
+        "Utilities": u_el,
+        "Power": p_el,
+        "Total": r_el + u_el + p_el
         }
 
 
     people = {
-        "Quinn": Quinn,
+        "Nathan": Nathan,
         "Noah": Noah,
         "Ella": Ella
         }
@@ -34,6 +55,7 @@ def calc_rent(total, power):
     print("Total Rent is $%0.2f" % rent)
     print("Total Utilities is $%0.2f" % utilities)
     print("Total Power is $%0.2f" % power)
+    print("Total for Rent + Utilites + power is $%0.2f" % total)
 
 
     for i in people:
@@ -44,7 +66,7 @@ def calc_rent(total, power):
 
 
 def main():
-    total = float(input("Please enter the total rent for this month\n"))
+    total = float(input("Please enter the total rent + utilites for this month\n"))
     power = float(input("Please enter the total power for this month\n"))
 
     calc_rent(total, power);
