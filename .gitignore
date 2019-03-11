@@ -105,6 +105,7 @@ curses/bin/
 curses/share/
 curses/lib/
 curses/lib64/
+curses/.idea/
 
 
 WebTutorials/flaskrVenv/include
